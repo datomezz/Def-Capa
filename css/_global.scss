@@ -1,0 +1,17 @@
+@mixin flex($direction,$justify,$align){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin img($width,$height){
+    width: $width;
+    height: $height;
+}
+*{
+    margin:0;
+    padding:0;
+    color: $white;
+    font-family: 'Raleway', sans-serif;
+    text-decoration:none;
+}

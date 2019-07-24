@@ -1,0 +1,165 @@
+body{
+    background:$firstColor;
+    nav{
+        @include img(10%,100vh);
+        background-color: $secondColor;
+        position:fixed;
+        ul{
+            list-style:none;
+            @include flex(column,start,center);
+            a{
+                @include img(100%,auto);
+                @include flex(column,start,center);
+            }
+            li{
+                @include flex(column,start,center);
+                width:100%;
+                padding:1rem 0;
+                img{
+                    @include img(100%,auto);
+                }
+                &:first-child{
+                    padding:0;
+                }
+                &:hover{
+                    background: $firstColor;
+                    cursor:pointer;
+                }
+                i{
+                    font-size:2rem;
+                    margin-bottom:1rem;
+                }
+            }
+        }
+    }
+    main{
+        width:90%;
+        margin: 0 10%;
+        #first_section{
+            @include flex(column,start,center);
+            .introduce{
+                @include flex(column,start,center);
+                h1{
+                    font-size:3rem;
+                    margin-top: 5rem;
+                    font-weight:100;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        img{
+            margin: 5rem auto;
+            @include img(40%,auto);
+        }
+        #second_section{
+            margin:0 10rem;
+            h1:first-child{
+                display:inline-block;
+                border-bottom:1px solid $white;
+                padding-bottom:1.5rem;
+            }
+            p{
+                margin:2rem 0;
+                color: $textColor;
+            }
+            #skills{
+                margin: 2rem 0;
+                p{
+                    letter-spacing:.4rem;
+                }
+                #skills_first{
+                    background-color: $textColor;
+                    height:2rem;
+                    div{
+                        background-color:$white;
+                        width:95%;
+                        height: 2rem;
+                        @include img(95%,2rem);
+                    }
+                }
+                #skills_second{
+                    background-color: $textColor;
+                    height:2rem;
+                    div{
+                        background-color:$white;
+                        @include img(85%,2rem);
+                    }
+                }
+                #skills_third{
+                    background-color: $textColor;
+                    height:2rem;
+                    div{
+                        background-color:$white;
+                        @include img(80%,2rem);
+                    }
+                }
+            }
+            .portfolio_count{
+                background: $white;
+                height:8rem;
+                box-sizing:border-box;
+                padding-top:2rem;
+                margin-bottom:5rem;
+                @include flex(row, space-around, center);
+                div{
+                    @include flex(column,center,center);
+                    .number:first-child{
+                        font-size:2rem;
+                        margin:-22px;
+                    }
+                }
+            }
+        }
+        .video_resume{
+            margin:0 12.5%;
+            .videos{
+                @include flex(row,center,start);
+                flex-wrap: wrap;
+                a{
+                    margin-right: 2rem;
+                    margin-bottom:-8rem;
+                    img{
+                        @include img(25rem,20rem);
+                    border:1px solid white;
+                        &:hover{
+                            opacity: .5;
+                        }
+                    } 
+                }
+            }
+        }
+        .footer{
+            margin:10rem 12.5% 0 12.5%;
+            .contact{
+                h1{
+                    display:inline-block;
+                    margin-bottom:2rem;
+                    border-bottom:1px solid white;
+                }
+                .LocMailPhone{
+                    @include flex(column,start,start);
+                    p{
+                        display:inline-block;
+                        margin-bottom:1rem;
+                        i{
+                            font-size:1.5rem;
+                            margin-right:2rem;
+                        }
+                    }
+                }
+            }
+            .social{
+                margin: 2rem 0;
+                a{
+                    i{
+                        font-size:2rem;
+                        margin-right:1.2rem;
+                        &:hover{
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
